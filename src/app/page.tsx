@@ -15,7 +15,7 @@ type User = {
   role: string;
 };
 
-export default function Home() {
+export default function Erdem() {
   const {
     register,
     handleSubmit,
@@ -33,7 +33,7 @@ export default function Home() {
   const sendGraphQLRequest = async (query: string, variables?: any) => {
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:3000", {
+      const response = await fetch("/api/graphql", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
